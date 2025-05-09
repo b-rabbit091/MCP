@@ -102,13 +102,16 @@ WSGI_APPLICATION = 'medical_coding_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'medicodeai',  # Your database name
-        'USER': 'medicodeuserai',  # Your DB user
-        'PASSWORD': 'medicodeuserai',  # Your password
-        'HOST': 'localhost',  # Or your host IP
+        'NAME': 'mcp',  # Your database name
+        'USER': 'mcp_user',  # Your DB user
+        'PASSWORD': 'mcp_password',  # Your password
+        'HOST': 'db',  # Or your host IP
         'PORT': '5432',  # Default PostgreSQL port
     }
 }
+MEDIA_URL = '/media/'
+STATIC_URL = '/django_static/'
+STATIC_ROOT = BASE_DIR / 'django_static'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
