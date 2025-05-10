@@ -19,7 +19,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("coding.urls"), ),
-    path("", include("user.urls"), ),
-    path("", include("dashboard.urls"), ),
+    path("api/", include("coding.urls"), ),
+    path("api/", include("user.urls"), ),
+    path("api/", include("dashboard.urls"), ),
 ]

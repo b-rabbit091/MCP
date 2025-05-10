@@ -61,9 +61,7 @@ CORS_ALLOW_ALL_ORIGINS = True  # or just remove it
 # ]
 CORS_ALLOW_CREDENTIALS = True
 # CSRF
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
-]
+
 CSRF_COOKIE_HTTPONLY = False  # Allow JavaScript to access the CSRF token
 CSRF_COOKIE_SAMESITE = 'None'  # Allow cross-origin requests
 CSRF_COOKIE_SECURE = False  # Set this to True if using HTTPS
@@ -153,3 +151,14 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 RESOURCES = 'resources'
+
+# settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'ranaprasanna908@gmail.com'
+EMAIL_HOST_PASSWORD = 'kpwj exak poqc mgee'  # Use App Password, not real one
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+FRONTEND_URL = 'http://localhost'  # Or your deployed frontend
